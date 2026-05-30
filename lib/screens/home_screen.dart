@@ -168,27 +168,33 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildHeader(AppLocalizations l) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           const SizedBox(width: 40),
-          ShaderMask(
-            shaderCallback: (b) => const LinearGradient(
-                colors: [Color(0xFFFF2D78), Color(0xFF00CFFF)]).createShader(b),
-            child: Text(l.appTitle,
-                style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900,
-                    color: Colors.white, letterSpacing: 1.5)),
+          Flexible(
+            child: ShaderMask(
+              shaderCallback: (b) => const LinearGradient(
+                  colors: [Color(0xFFFF2D78), Color(0xFF00CFFF)]).createShader(b),
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(l.appTitle,
+                    style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900,
+                        color: Colors.white, letterSpacing: 1.5)),
+              ),
+            ),
           ),
+          const SizedBox(width: 8),
           GestureDetector(
             onTap: _openAddDialog,
             child: Container(
-              width: 40, height: 40,
+              width: 38, height: 38,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(color: const Color(0xFFFF2D78), width: 2),
               ),
-              child: const Icon(Icons.add, color: Color(0xFFFF2D78), size: 22),
+              child: const Icon(Icons.add, color: Color(0xFFFF2D78), size: 20),
             ),
           ),
         ],

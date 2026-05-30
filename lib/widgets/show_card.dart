@@ -103,6 +103,8 @@ class ShowCard extends StatelessWidget {
                     children: [
                       Text(
                         show.title,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           color: show.watched
                               ? Colors.white38
@@ -113,7 +115,7 @@ class ShowCard extends StatelessWidget {
                                       : HSLColor.fromColor(show.displayColor)
                                           .withLightness(0.75)
                                           .toColor(),
-                          fontSize: 15,
+                          fontSize: 14,
                           fontWeight: FontWeight.w700,
                           decoration: show.watched
                               ? TextDecoration.lineThrough
