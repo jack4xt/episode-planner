@@ -1,0 +1,11 @@
+Episode Planner is a simple and elegant app for tracking TV shows and episodes.
+
+It helps you:
+- Plan TV shows by days of the week
+- Track seasons and episodes
+- Mark watched episodes
+- Keep a watch history
+- Backup and restore your data
+- Stay on top of new episodes
+
+The app supports Czech and English and works without registration.
