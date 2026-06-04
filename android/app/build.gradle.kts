@@ -23,6 +23,10 @@ android {
         }
     }
     namespace = "com.jack4xt.episodeplanner"
+    dependenciesInfo {
+    includeInApk = false
+    includeInBundle = false
+    }
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
