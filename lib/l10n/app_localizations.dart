@@ -43,6 +43,9 @@ class AppLocalizations {
     'supportDesc': 'Pokud tě aplikace baví, můžeš mi koupit kafe přes Ko-fi.',
     'tmdbCredit': 'Data o seriálech poskytuje',
     'version': 'Verze',
+    'watchlist': 'CHCI VIDĚT',
+    'watchlistHint': 'Název filmu nebo seriálu...',
+    'watchlistEmpty': 'Tvůj seznam je prázdný',
   };
 
   static const _en = {
@@ -80,6 +83,9 @@ class AppLocalizations {
     'supportDesc': 'If you enjoy the app, you can support the developer via Ko-fi.',
     'tmdbCredit': 'Show data provided by',
     'version': 'Version',
+    'watchlist': 'WATCHLIST',
+    'watchlistHint': 'Movie or show name...',
+    'watchlistEmpty': 'Your watchlist is empty',
   };
 
   Map<String, String> get _s => locale.languageCode == 'cs' ? _cs : _en;
@@ -141,6 +147,9 @@ class AppLocalizations {
   String get supportDesc => _s['supportDesc']!;
   String get tmdbCredit => _s['tmdbCredit']!;
   String get version => _s['version']!;
+  String get watchlist => _s['watchlist']!;
+  String get watchlistHint => _s['watchlistHint']!;
+  String get watchlistEmpty => _s['watchlistEmpty']!;
 }
 
 class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

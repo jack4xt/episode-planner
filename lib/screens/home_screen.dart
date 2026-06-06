@@ -8,6 +8,7 @@ import '../widgets/add_edit_show_dialog.dart';
 import '../widgets/tmdb_alert_bar.dart';
 import 'history_screen.dart';
 import 'settings_screen.dart';
+import 'watchlist_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   final ShowProvider provider;
@@ -116,9 +117,12 @@ class _HomeScreenState extends State<HomeScreen> {
     Widget body;
     switch (_bottomIndex) {
       case 1:
-        body = HistoryScreen(provider: _provider);
+        body = const WatchlistScreen();
         break;
       case 2:
+        body = HistoryScreen(provider: _provider);
+        break;
+      case 3:
         body = SettingsScreen(provider: _provider);
         break;
       default:
@@ -338,6 +342,7 @@ class _HomeScreenState extends State<HomeScreen> {
         unselectedItemColor: Colors.white38,
         items: [
           BottomNavigationBarItem(icon: const Icon(Icons.calendar_today), label: l.dayLabels[DateTime.now().weekday - 1]),
+          BottomNavigationBarItem(icon: const Icon(Icons.bookmark_border), label: l.watchlist),
           BottomNavigationBarItem(icon: const Icon(Icons.history), label: l.history),
           BottomNavigationBarItem(icon: const Icon(Icons.settings), label: l.settings),
         ],
